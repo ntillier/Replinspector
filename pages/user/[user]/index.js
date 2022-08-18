@@ -25,11 +25,12 @@ export default function (props) {
   
   return (<>
     <div className={styles.firstPart}>
-      <div className={styles.banner} style={ props.coverImage ? {'background-image':'url(' + props.coverImage + ');'} : ''}></div>
-      <div className={styles.user}>
+      <div className={styles.banner} style={ props.coverImage ? {'background-image':'url(' + props.coverImage + ');'} : ''}>
         <img
           src={props.user.image}
         />
+      </div>
+      <div className={styles.user}>
         <h3>{props.user.fullName}</h3>
         <i>@{props.user.username}</i>
         <b>{props.user.followerCount} followers · {props.user.followCount} following</b>
@@ -64,18 +65,6 @@ export default function (props) {
           color="blue"
           >
           View profile on Replit
-        </Button>
-        <Button
-          onClick={() => window.open('https://replit.com/@' + props.user.username)}
-          color="green"
-          >
-          Green
-        </Button>
-        <Button
-          onClick={() => window.open('https://replit.com/@' + props.user.username)}
-          color="red"
-          >
-          red
         </Button>
       </div>
     </div>
