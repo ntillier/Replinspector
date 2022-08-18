@@ -1,0 +1,61 @@
+.firstPart {
+  margin: 5%;
+  height: 75vh;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  background: var(--dark-grey);
+}
+.user * {
+  margin: 0;
+  padding: 0;
+}
+.user > h3 {
+  font-size: 32px;
+}
+.user > img {
+  display: block;
+  position: relative;
+  margin: 10px auto;
+  width: 50%;
+  max-width: 200px;
+  border-radius: 100px;
+  border: solid 1px var(--white);
+}
+.user > *:not(img) {
+  display: block;
+  text-align: center;
+  margin: 5px;
+}
+.user > i {
+  margin: -2 5px 12px 5px;
+}
+.user > ul, .user > ol {
+  list-style: none;
+}
+.user > div {
+  padding: 10px;
+  line-height: 1.4em;
+  font-size: 1.1em;
+}
+.user > a {
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px 1px 0 1px var(--white);
+  border-radius: 10px 10px 0 0;
+}
+.user > ol img {
+  width: 80px;
+  margin: 10px
+}
+.banner {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 1000;
+  width: 100vw;
+  height: 40%;
+  max-height: 400px;
+  min-height: 100px;
+  background-color: linear-gradient(90deg, var(--light-blue), var(--purple));
+}

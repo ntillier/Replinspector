@@ -1,0 +1,59 @@
+.role {
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: var(--light-black);
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+}
+.tooltip {
+  visibility: hidden;
+  width: max-content;
+  max-width: min(90vw, 350px);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  bottom: 125%;
+  opacity: 0;
+  transition: opacity 0.5s;
+  transition-delay: 0.5s;
+}
+.tooltip, * > .tooltip:after {
+  position: absolute;
+  background: var(--grey);
+  border: solid 1px var(--white);
+}
+* > .tooltip:after {
+  content: '';
+  top: calc(100% - 5px);
+  left: calc(50% - 5px);
+  width: 10px;
+  height: 10px;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+}
+*:hover > .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.button-blue {
+  background: #0053a6;
+}
+.button-blue:hover {
+  border-color: #57abff;
+}
+.button-green {
+  background: rgb(4, 97, 19);
+}
+.button-green:hover {
+  border-color: rgba(108, 217, 126, 0.53);
+}
+.button-red {
+  background: transparent;
+  color: rgb(255, 102, 102);
+  border-color: #A60808;
+}
+.button-red:hover {
+  background: rgba(166, 8, 8, 0.55);
+}

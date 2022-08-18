@@ -1,7 +1,33 @@
-import '../styles/globals.css'
+import 'styles/globals.css'
+
+import { AuthProvider } from 'contexts/Auth'
+import { useEffect, useState } from 'react'
+import cookie from 'js-cookie'
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    if (!user && typeof window === 'object') {
+      fetch('/api/auth/me')
+        .then(r => r.json())
+        .then(j => {
+          setUser(j);
+        });
+    }
+  }, []);
+  
+  return (
+    <AuthProvider user={user}>
+      <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" />
+
+      {
+        user &&
+          <Component {...pageProps} />
+      }
+    </AuthProvider>
+  );
 }
 
 export default MyApp

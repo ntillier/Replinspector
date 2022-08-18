@@ -2,8 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: var(--light-black);
+  color: var(--white);
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 a {
@@ -13,4 +14,46 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+:root {
+  --black: #0e1525;
+  --light-black: #1c2333;
+  --dark-grey: #2b3245;
+  --grey: #4e5569;
+  --dark-blue: #004182;
+  --blue: #0079f2;
+  --white: #f5f9fc;
+  --purple: #c16cec;
+  --light-blue: #0053a6;
+  --orange: #703800;
+  --blue-green: #006073;
+  --green: #046113;
+  --yellow: #635300;
+  --dark-purple: #7633b8;
+}
+
+.pinned {
+  width: 55%;
+}
+.pinned iframe {
+  border-radius: 10px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border: solid 1px var(--black);
+}
+button {
+  border: solid 1px transparent;
+  background: none;
+  padding: 8px !important;
+  color: rgb(245, 249, 252);
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  background: rgb(28, 35, 51);
+  transition: .12s;
+}
+button:hover {
+  border-color: rgba(112, 120, 140, 0.553);
 }
