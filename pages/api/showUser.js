@@ -1,16 +1,9 @@
 import db from 'script/Database'
 
-const users = db.collection('users');
 const repls = db.collection('repls');
 
 export default async function (req, res) {
-  const userRef = await users
-    .doc(req.query.user.toLowerCase())
-    .get();
-
-  const user = userRef?.data();
-
-  if (!user) {
+  if (!req.query.user) {
     return res.json({
       error: 'Can\'t find the user.',
       repls: []
@@ -18,7 +11,7 @@ export default async function (req, res) {
   }
 
   const replsRef = await repls
-    .where('authorName', '==', user.username)
+    .where('authorName', '==', req.query.user)
     .get();
 
   const repl = replsRef.docs.map(i => i.data());

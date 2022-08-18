@@ -86,10 +86,10 @@ export default async function (req, res) {
           isHacker
           isModerator: hasRole(role: MODERATOR)
           isAdmin: hasRole(role: ADMIN)
-          isVerified
+          isVerified: hasRole(role: FEATURED)
           followerCount
           followCount
-          roles(only:  [MODERATOR, CONTENT_CREATOR, DETECTIVE, LANGUAGE_JAMMER]) {
+          roles(only:  [CONTENT_CREATOR, LANGUAGE_JAMMER]) {
             name
             key
             tagline
@@ -112,6 +112,7 @@ export default async function (req, res) {
         user: userByUsername(username: $username) {
           coverImage {
             url
+            offsetY
           }
         }
       }`,

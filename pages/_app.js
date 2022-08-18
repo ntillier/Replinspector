@@ -16,7 +16,13 @@ function MyApp({ Component, pageProps }) {
         });
     }
   }, []);
-  
+  /*return (
+    <AuthProvider user={user || { loggedIn: false }}>
+      <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" />
+        <Component {...pageProps} />
+    </AuthProvider>
+  );*/
   return (
     <AuthProvider user={user}>
       <link rel="stylesheet"

@@ -7,7 +7,12 @@ const color = {
   'moderator': '--blue-green',
   'admin': '--yellow',
   'verified': '--light-blue',
-  'language jammer': '--dark-purple'
+  'language jammer': '--dark-purple',
+  'Starting': '--light-blue',
+  'In progress': '--light-blue',
+  'Almost done': '--light-blue',
+  'Published': '--light-blue',
+  'Improving': '--light-blue'
 }
 
 export default function ({ name, description }) {
