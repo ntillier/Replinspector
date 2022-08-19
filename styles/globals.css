@@ -1,5 +1,6 @@
-html,
-body {
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+html, body {
   padding: 0;
   margin: 0;
   background: var(--light-black);
@@ -33,7 +34,9 @@ a {
   --yellow: #635300;
   --dark-purple: #7633b8;
 }
-
+a {
+  color: rgb(87, 171, 255);
+}
 .pinned {
   width: 55%;
 }

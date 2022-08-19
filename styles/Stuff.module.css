@@ -118,3 +118,23 @@
   flex-wrap: wrap;
   flex-direction: row;
 }
+.comment {
+  display: block;
+  padding: 10px;
+}
+.comment img {
+  width: 32px;
+  float: left;
+}
+.comment b {
+  margin: 0 10px;
+}
+.comment i {
+  font-size: 0.8em;
+}
+.comment div {
+  position: relative;
+  width: calc(100% - 45px);
+  left: 42px;
+  top: -12px;
+}

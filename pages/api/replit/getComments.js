@@ -218,7 +218,7 @@ export default async function (req, res) {
       replId: req.query.replid,
     }
   });
-  res.json(data);
+  res.json({ comments: data?.data?.repl?.comments });
 }
 
 /*

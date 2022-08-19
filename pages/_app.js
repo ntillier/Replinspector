@@ -25,9 +25,6 @@ function MyApp({ Component, pageProps }) {
   );*/
   return (
     <AuthProvider user={user}>
-      <link rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" />
-
       {
         user &&
           <Component {...pageProps} />
