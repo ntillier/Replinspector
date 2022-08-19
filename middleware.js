@@ -19,6 +19,10 @@ export default async function middleware(request) {
     return NextResponse.redirect(new URL('/login', request.url));
   }
 
-  //response.cookies.set('user', JSON.stringify(/*await getUser(request)*/{}));
+  response.cookies.set('user', JSON.stringify({
+    loggedIn: Boolean(request.headers.get('x-replit-user-id')),
+    username: request.headers.get('x-replit-user-name'),
+    id: parseInt(request.headers.get('x-replit-user-id'))
+  }));
   return response;
 }

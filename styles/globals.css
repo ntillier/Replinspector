@@ -3,7 +3,7 @@
 html, body {
   padding: 0;
   margin: 0;
-  background: var(--light-black);
+  background: var(--black);
   color: var(--white);
   font-family: "IBM Plex Sans", sans-serif;
   cursor: default;
@@ -55,9 +55,9 @@ button {
   border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
-  background: rgb(28, 35, 51);
+  background: #2b3245;
   transition: .12s;
 }
 button:hover {
-  border-color: rgba(112, 120, 140, 0.553);
+  border-color: rgba(112, 120, 140, 0.9);
 }

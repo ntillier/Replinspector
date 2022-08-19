@@ -80,5 +80,5 @@ export default async function (req, res) {
       url: `/@${req.query.user}/${req.query.repl}`
     }
   });
-  res.json(data);
+  res.json(data?.data);
 }

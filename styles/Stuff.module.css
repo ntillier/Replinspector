@@ -66,6 +66,10 @@
   border-radius: 10px;
   color: rgb(255, 82, 82);
 }
+.working {
+  color: #6cd97e;
+  border-color: #6cd97e;
+}
 .repl {
   list-style: none;
   padding: 10px;
